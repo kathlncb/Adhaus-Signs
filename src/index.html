@@ -1,0 +1,388 @@
+---
+title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/landing.jpg'
+permalink: '/'
+tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-82">
+    <div class="cs-container">
+        <h1 class="cs-title">26 Years of Experience in the World of Signs.  </h1>
+        <p class="cs-text">
+            We do signage for Home owners and Business owners as well. 
+        </p>
+        <a href="#contact-1695" class="cs-button-solid">INQUIRE NOW</a>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen-m.jpg">
+        <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/2%20Strawberry%20Hill%20Crt.jpg/:/rs=w:740,cg:true,m">
+        <img decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/kitchen.jpg" alt="kitchen" width="2250" height="1500" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-2272">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_0815.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_0815.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_0815.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="wedding" width="272" height="337">
+            </picture>
+            <!--Small Image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_0815.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/80%20Swennen%20Drive.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/80%20Swennen%20Drive.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="wedding" width="243" height="367">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">Welcome to </br>Adhaus Signs</h2>
+            <p class="cs-text">
+                We are a trusted provider for all your signage needs. Custom letters and numbers. Specialized on Home Address Signs. Modernize your home with the elegance of this.<br><br>
+We offer high end quality of service for every job that we render and gives 100% satisfaction to all our customers.
+            </p>
+        </div>
+    </div>
+</section>
+ 
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="services-343">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">Expert Signage Solutions for Homes & Businesses</h2>
+            <p class="cs-text">
+                At Adhaus Signs, we create high-quality, custom signs to help your business stand out and your home shine. From LED displays to elegant residential signs, we bring your vision to life with craftsmanship and precision.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/113_115%20Iceland%20Poppy%20Tr.jpg/:/rs=w:740,cg:true,m">
+                        <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/113_115%20Iceland%20Poppy%20Tr.jpg/:/rs=w:740,cg:true,m">
+                        <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/113_115%20Iceland%20Poppy%20Tr.jpg/:/rs=w:740,cg:true,m" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">LED Residential </br> Signs</h3>
+                    <p class="cs-item-text">
+                        Bright, energy-efficient, and long-lasting, our LED residential signs ensure high visibility, day or night. Perfect for house numbers, nameplates, and decorative signage.
+                    </p>
+            </li>
+            <li class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3248%20Trisha%20Downs.jpg/:/rs=w:740,cg:true,m">
+                        <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3248%20Trisha%20Downs.jpg/:/rs=w:740,cg:true,m">
+                        <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3248%20Trisha%20Downs.jpg/:/rs=w:740,cg:true,m" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Non-LED Residential Signs</h3>
+                    <p class="cs-item-text">
+                        Timeless and durable, our non-LED residential signs offer a stylish way to display house numbers and property markers—no electricity needed.
+                    </p>
+            </li>
+            <li class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/937lighted.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                        <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/7255.jpg/:/rs=w:740,cg:true,m">
+                        <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/937lighted.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Illuminated Number Signs</h3>
+                    <p class="cs-item-text">
+                        Enhance visibility and curb appeal with illuminated number signs, making your address easy to find for guests, deliveries, and emergency services.
+                    </p>
+            </li>
+            <li class="cs-item">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3282.jpg/:/rs=w:740,cg:true,m">
+                        <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3282.jpg/:/rs=w:740,cg:true,m">
+                        <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3282.jpg/:/rs=w:740,cg:true,m" alt="cleaner" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">Non LED Number </br> Signs</h3>
+                    <p class="cs-item-text">
+                        Simple, durable, and stylish, our non-LED number signs provide a clear, elegant way to display your address with various material and finish options.
+                    </p>
+            </li>
+        </ul>   
+        <a href="#contact-1695" class="cs-button-solid">Get a Quote</a>
+    </div>
+</section>
+                                
+
+    <!-- ============================================ -->
+    <!--                   Reviews                    -->
+    <!-- ============================================ -->
+
+    <section id="quote-561">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Customer Review</span>
+                <p class="cs-quote">
+                    I would highly recommend this company. Very professional and the quality of service is excellent! I am very happy with the outcome of the job. All worth it! More business to come my friend and thank you so much!
+                </p>
+                <span class="cs-name">Sweet B. </span>
+            </div>
+        </div>
+    </section>
+                             
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">OUR PORTFOLIO</span>
+            <h2 class="cs-title">Some Work from </br>Our Previous Clients</h2>
+        </div>
+        <ul class="cs-image-group">
+            <!-- Image 1 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/75%20Reding%20Rd.jpg/:/rs=w:740,cg:true,m">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/75%20Reding%20Rd.jpg/:/rs=w:740,cg:true,m">
+                    <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/75%20Reding%20Rd.jpg/:/rs=w:740,cg:true,m" alt="fancy house" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 2 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/87%20Newbury%20Cres.jpg/:/rs=w:740,cg:true,m">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/87%20Newbury%20Cres.jpg/:/rs=w:740,cg:true,m">
+                    <img loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/87%20Newbury%20Cres.jpg/:/rs=w:740,cg:true,m" alt="modern house" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 3 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/7051.jpg/:/rs=w:740,cg:true,m">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/7051.jpg/:/rs=w:740,cg:true,m">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/7051.jpg/:/rs=w:740,cg:true,m" alt="modern home at night" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 4 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_1761.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_1761.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/IMG_1761.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="modern home" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 5 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/871%20Deer%20Valley%20Dr.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/871%20Deer%20Valley%20Dr.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/871%20Deer%20Valley%20Dr.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="appliance" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 6 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/396%20Kingsleigh%20Court.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/396%20Kingsleigh%20Court.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/396%20Kingsleigh%20Court.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="modern home" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 7 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/6%20Rollins%20Pl.jpg/:/rs=w:740,cg:true,m">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/6%20Rollins%20Pl.jpg/:/rs=w:740,cg:true,m">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/6%20Rollins%20Pl.jpg/:/rs=w:740,cg:true,m" alt="modern home" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 8 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3985.jpg/:/rs=w:740,cg:true,m">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3985.jpg/:/rs=w:740,cg:true,m">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3985.jpg/:/rs=w:740,cg:true,m" alt="modern home" width="346" height="346">
+                </picture>
+            </li>
+        </ul>
+        <a href="" class="cs-button-solid">View Full Gallery</a>
+    </div>
+</section>
+          
+    <!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1695">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-title">Talk to Us About Your Signage Needs!</h2>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-call.svg"
+                                alt="phone icon" class="cs-icon" width="24" height="24" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Message us on WhatsApp</span>
+                        <span class="cs-link-text">We are available for your 24/7 support. Call us at</span>
+                        <a href="tel:888-4565-789" class="cs-link">+1 647-297-8009</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-message.svg"
+                                alt="address icon" width="24" height="24" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Email Us</span>
+                        <span class="cs-link-text">Email your questions at</span>
+                        <a href="mailto:Email@stitch.com" class="cs-link">info@adhaussigns.ca</a>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" aria-hidden="true"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/enterprise-account.svg"
+                                alt="address icon" width="24" height="24" decoding="async">
+                    </picture>
+                    <div class="cs-flex-group">
+                        <span class="cs-header">Locate Us</span>
+                        <span class="cs-link-text">Brampton, Ontario, Canada</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--Form-->
+        <form class="cs-form" name="Contact Form" method="post">
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="name-1695" name="name" placeholder="Name">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="email" id="email-1695" name="email" placeholder="Email">
+            </label>
+            <label class="cs-label">
+                Phone
+                <input class="cs-input" required type="tel" id="phone-1695" name="phone" placeholder="Phone">
+            </label>
+            <label class="cs-label cs-label-message">
+                Services
+                <select name="cars" id="cs-select-485">
+                    <option value="full renovation">LED Residential Signs</option>
+                    <option value="sod install">Non-LED Residential Signs</option>
+                    <option value="yard cleanup">Illuminated Number Signs</option>
+                    <option value="landscape design">Non LED Number Signs</option>                
+                    <option value="landscape design">Other</option>
+                </select>
+            </label>
+            <label class="cs-label cs-label-message">
+                Message
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1695" placeholder="Write message..."></textarea>
+            </label>           
+            <p class="cs-wrapper">
+                <button class="cs-button-solid cs-submit" type="submit">SEND MESSAGE</button>
+            </p>
+        </form>
+    </div>
+
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)"
+                srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/blob-0007.jpg/:/rs=w:740,cg:true,m">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)"
+                srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/blob-0007.jpg/:/rs=w:740,cg:true,m">
+        <img loading="lazy" decoding="async"
+                src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/blob-0007.jpg/:/rs=w:740,cg:true,m"
+                alt="wind turbine" width="650" height="613">
+    </picture>
+</section>
+                         
+
+    {% include 'components/cta.html' %}
+{% endblock %}
