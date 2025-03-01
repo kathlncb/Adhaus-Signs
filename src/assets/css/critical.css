@@ -2,9 +2,6 @@
 /*-- -------------------------- -->
 <---           Hero             -->
 <--- -------------------------- -*/
-/*-- -------------------------- -->
-<---           Hero             -->
-<--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-82 {
@@ -58,7 +55,6 @@
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 700;
-    font-family: 'Poppins', sans-serif;
     line-height: 1.2em;
     text-align: center;
     max-width: 51.8125rem;

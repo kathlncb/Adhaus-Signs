@@ -24,9 +24,9 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">Contact Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3288-3290.jpg/:/rs=w:740,cg:true,m">
+            <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3288-3290.jpg/:/rs=w:740,cg:true,m">
+            <img aria-hidden="true" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/3288-3290.jpg/:/rs=w:740,cg:true,m" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
         </picture>
     </section>
 
@@ -41,7 +41,7 @@ eleventyNavigation:
                     <span class="cs-topper">Contact</span>
                     <h2 class="cs-title">Get in Touch</h2>
                     <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
+                        Whether you have a quick question or need a custom quote, we’re here to assist. Let’s connect and bring your ideas to life!
                     </p>
                 </div>
                 <label>
@@ -57,8 +57,14 @@ eleventyNavigation:
                     <input required type="text" id="phone" name="phone" placeholder="Phone">
                 </label>
                 <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
+                    Services
+                    <select name="cars" id="cs-select-485" >
+                        <option value="full renovation">LED Residential Signs</option>
+                        <option value="sod install">Non-LED Residential Signs</option>
+                        <option value="yard cleanup">Illuminated Number Signs</option>
+                        <option value="landscape design">Non LED Number Signs</option>                
+                        <option value="landscape design">Other</option>
+                    </select>
                 </label>
                 <label class="cs-label-message">
                     Message
@@ -76,10 +82,6 @@ eleventyNavigation:
                 <!--Address-->
                 <span class="cs-header">Address</span>
                 <a class="cs-link" href="{{client.address.mapLink}}">
-                    {{client.address.lineOne}},
-                    <br/>
-                    {{client.address.lineTwo}},
-                    <br/>
                     <span class="cs-block">
                         {{client.address.city}}
                         {{client.address.state}}
@@ -89,8 +91,8 @@ eleventyNavigation:
 
                 <!-- Background Image-->
                 <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
+                    <source media="(min-width: 601px)" srcset="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/97.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true">
+                    <img aria-hidden="true" decoding="async" src="https://img1.wsimg.com/isteam/ip/10435767-f1c4-40bf-bcea-4a8ed673ea6c/97.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:740,cg:true" alt="building" loading="lazy" width="2500" height="1667">
                 </picture>
 
             </div>

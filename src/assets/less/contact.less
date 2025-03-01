@@ -96,6 +96,33 @@
                 font-family: inherit;
             }
 
+            #cs-select-485 {
+                font-size: (16/16rem);
+                width: 100%;
+                height: (56/16rem);
+                /* prevents padding from adding to height and width */
+                box-sizing: border-box;
+                padding: 0;
+                padding-left: (24/16rem);
+                color: var(--headerColor);
+                background-color: #fff;
+                border: 1px solid #b4b2c7;
+                border-radius: (8/16rem);
+                margin-top: (4/16rem);
+                height: (64/16rem);
+                width: 100%;
+                /* prevents border & padding from affecting height */
+                box-sizing: border-box;
+                padding-left: (20/16rem);
+                font-size: (16/16rem);
+                transition: border 0.3s;
+
+                &:hover {
+                    border: 1px solid var(--primary); 
+
+                }
+            }
+
             .cs-button-solid {
                 border: none;
                 width: 100%;

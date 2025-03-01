@@ -1,19 +1,19 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Adhaus Signs",
+    "email": "info@adhaussigns.ca",
+    "phoneForTel": "+1 647-297-8009",
+    "phoneFormatted": "(647) 297-8009",
     "address": {
         "lineOne": "First Address Line",
         "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "city": "Brampton",
+        "state": "Ontario",
+        "zip": "L4T 3B4",
+        "country": "Canada",
+        "mapLink": "https://maps.app.goo.gl/XKbf5FxSd3vzDbFf6"
     },
     "socials": {
-        "facebook": "https://www.facebook.com/",
+        "facebook": "https://www.facebook.com/AdhausSigns",
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included

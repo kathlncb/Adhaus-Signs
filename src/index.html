@@ -84,7 +84,7 @@ eleventyNavigation:
         <p class="cs-text">
             We do signage for Home owners and Business owners as well. 
         </p>
-        <a href="#contact-1695" class="cs-button-solid">INQUIRE NOW</a>
+        <a href="contact" class="cs-button-solid">INQUIRE NOW</a>
     </div>
 
     <!-- Background Image -->
@@ -189,7 +189,7 @@ We offer high end quality of service for every job that we render and gives 100%
                     </p>
             </li>
         </ul>   
-        <a href="#contact-1695" class="cs-button-solid">Get a Quote</a>
+        <a href="contact" class="cs-button-solid">Get a Quote</a>
     </div>
 </section>
                                 
@@ -297,7 +297,7 @@ We offer high end quality of service for every job that we render and gives 100%
 <section id="contact-1695">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Talk to Us About Your Signage Needs!</h2>        
+            <h2 class="cs-title">Contact Us Today</h2>        
             <p class="cs-text">
                 Please send us a message or call to get a quote. </br> We guarantee that you will find our pricing affordable!
             </p>
@@ -311,7 +311,7 @@ We offer high end quality of service for every job that we render and gives 100%
                     <div class="cs-flex-group">
                         <span class="cs-header">Message us on WhatsApp</span>
                         <span class="cs-link-text">We are available for your 24/7 support. Call us at</span>
-                        <a href="tel:888-4565-789" class="cs-link">+1 647-297-8009</a>
+                        <a href="tel:{{client.phoneFormatted}}" class="cs-link">{{client.phoneFormatted}}</a>
                     </div>
                 </li>
                 <li class="cs-li">
@@ -323,7 +323,7 @@ We offer high end quality of service for every job that we render and gives 100%
                     <div class="cs-flex-group">
                         <span class="cs-header">Email Us</span>
                         <span class="cs-link-text">Email your questions at</span>
-                        <a href="mailto:Email@stitch.com" class="cs-link">info@adhaussigns.ca</a>
+                        <a href="mailto:{{client.email}}" class="cs-link">{{client.email}}</a>
                     </div>
                 </li>
                 <li class="cs-li">

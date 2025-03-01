@@ -84,6 +84,27 @@
     padding-top: 1.25rem;
     font-family: inherit;
   }
+  #cs-contact #cs-form #cs-select-485 {
+    height: 3.5rem;
+    /* prevents padding from adding to height and width */
+    padding: 0;
+    padding-left: 1.5rem;
+    color: var(--headerColor);
+    background-color: #fff;
+    border: 1px solid #b4b2c7;
+    border-radius: 0.5rem;
+    margin-top: 0.25rem;
+    height: 4rem;
+    width: 100%;
+    /* prevents border & padding from affecting height */
+    box-sizing: border-box;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  #cs-contact #cs-form #cs-select-485:hover {
+    border: 1px solid var(--primary);
+  }
   #cs-contact #cs-form .cs-button-solid {
     border: none;
     width: 100%;
