@@ -939,6 +939,7 @@
     color: #fff;
     padding: 0 2rem;
     background-color: var(--primary);
+    border-radius: 0.25rem;
     overflow: hidden;
     display: inline-block;
     position: relative;
