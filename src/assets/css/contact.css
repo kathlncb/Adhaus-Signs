@@ -130,14 +130,16 @@
   #cs-contact .cs-topper {
     /* 8px - 12px */
     margin-bottom: clamp(0.5rem, 1.4vw, 0.75rem);
+    font-family: "Poppins", sans-serif;
     text-align: left;
   }
   #cs-contact .cs-title {
     max-width: 50rem;
     text-align: left;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Poppins", sans-serif;
   }
   #cs-contact .cs-text {
+    font-family: "Poppins", sans-serif;
     margin: 0 auto 0 0;
     /* 40px - 48px */
     margin-bottom: clamp(2.5rem, 6.3vw, 3rem);
@@ -157,12 +159,14 @@
     margin-bottom: clamp(0.75rem, 1.3em, 1.25rem);
     font-size: 1rem;
     line-height: 1.5em;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: var(--headerColor);
   }
   #cs-contact #cs-form .cs-label-message {
     /* 32px - 48px */
     margin-bottom: clamp(2rem, 6.3vw, 3rem);
+    font-family: "Poppins", sans-serif;
   }
   #cs-contact #cs-form input,
   #cs-contact #cs-form textarea {
@@ -175,6 +179,7 @@
     box-sizing: border-box;
     padding-left: 1.25rem;
     font-size: 1rem;
+    font-family: "Poppins", sans-serif;
     transition: border 0.3s;
   }
   #cs-contact #cs-form input:hover,
@@ -184,7 +189,7 @@
   #cs-contact #cs-form textarea {
     min-height: 7.5rem;
     padding-top: 1.25rem;
-    font-family: inherit;
+    font-family: "Poppins", sans-serif;
   }
   #cs-contact #cs-form #cs-select-485 {
     height: 3.5rem;
@@ -201,6 +206,7 @@
     /* prevents border & padding from affecting height */
     box-sizing: border-box;
     padding-left: 1.25rem;
+    font-family: "Poppins", sans-serif;
     font-size: 1rem;
     transition: border 0.3s;
   }
@@ -210,6 +216,7 @@
   #cs-contact #cs-form .cs-button-solid {
     border: none;
     width: 100%;
+    font-family: "Poppins", sans-serif;
   }
   #cs-contact .cs-right-section {
     position: relative;
@@ -232,6 +239,7 @@
     font-size: clamp(1rem, 3vw, 1.25rem);
     line-height: 1.2em;
     font-weight: 700;
+    font-family: "Poppins", sans-serif;
     color: var(--bodyTextColorWhite);
   }
   #cs-contact .cs-link {
@@ -241,6 +249,7 @@
     text-decoration: none;
     /* 16px - 20px */
     font-size: clamp(1rem, 3vw, 1.25rem);
+    font-family: "Poppins", sans-serif;
     line-height: 1.2em;
     color: var(--bodyTextColorWhite);
   }
