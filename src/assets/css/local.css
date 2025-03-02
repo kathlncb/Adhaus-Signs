@@ -34,10 +34,16 @@
   }
   #sbsr-2272 .cs-title {
     max-width: 30ch;
-    font-family: 'Poppins', sans-serif;
+    color: var(--secondary);
+  }
+  #sbsr-2272 .cs-text-bold {
+    color: #000;
+    font-weight: 600;
+    font-size: 1.25rem;
   }
   #sbsr-2272 .cs-text {
     margin-bottom: 2rem;
+    color: var(--bodyTextColor);
   }
   #sbsr-2272 .cs-button-solid {
     font-size: 1rem;
@@ -50,7 +56,7 @@
     margin: 0;
     padding: 0 1.5rem;
     background-color: var(--primary);
-    color: var(--bodyTextColorWhite);
+    color: var(--headerColor);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -73,7 +79,7 @@
   }
   #sbsr-2272 .cs-image-group {
     /* scales the whole section down and ties the font size to the vw and stops at 75% of the vale of 1em, changes at desktop */
-    font-size: min(2.17vw, 0.8rem);
+    font-size: min(2.17vw, .8rem);
     /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
     width: 41.875em;
     height: 26.75em;
@@ -195,6 +201,7 @@
     width: 100%;
     /* changes to 1440px at tablet */
     max-width: 34.375rem;
+    background-color: #fff;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -242,6 +249,7 @@
   }
   #services-343 .cs-item:hover .cs-h3 {
     color: var(--primaryLight);
+    font-weight: 600;
   }
   #services-343 .cs-item:before {
     /* border, done in pseudo so it can sit under the picture */
@@ -299,6 +307,7 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
     margin: 0;
+    margin-bottom: 1.5rem;
     /* 16px - 24px */
     padding: 0 clamp(1rem, 2.2vw, 1.5rem);
   }
@@ -485,7 +494,8 @@
     /* 46px - 56px */
     line-height: clamp(2.875rem, 5.5vw, 3.5rem);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0;
     color: #fff;

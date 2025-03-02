@@ -7,7 +7,7 @@
   :root {
     --primary: #FB0401;
     --primaryLight: #e65c59;
-    --secondary: #FB0401;
+    --secondary: #ED2124;
     --secondaryLight: #001f3f;
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
@@ -16,7 +16,7 @@
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
-    --bodyFontSize: 1rem;
+    --bodyFontSize: 1.125rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
@@ -27,7 +27,7 @@
     letter-spacing: 0.1em;
     font-size: var(--topperFontSize);
     line-height: 1.2em;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--primary);
     text-align: inherit;
   }
@@ -37,7 +37,7 @@
     max-width: 43.75rem;
     font-size: var(--headerFontSize);
     line-height: 1.2em;
-    font-weight: 900;
+    font-weight: 700;
     color: var(--headerColor);
     text-align: inherit;
   }
@@ -107,7 +107,7 @@
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 100%;
     color: var(--bodyTextColor);
   }
@@ -157,31 +157,40 @@
     left: 0;
     opacity: 0;
   }
-  /* roboto-regular - latin */
+  /* Poppins-regular - latin */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Poppins";
     font-weight: 400;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff");
+    src: local(""), url("/assets/fonts/Poppins-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Poppins-Regular.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-700 - latin */
+  /* Poppins-600 - SemiBold */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Poppins";
+    font-weight: 600;
+    font-display: swap;
+    src: local(""), url("/assets/fonts/Poppins-SemiBold.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Poppins-SemiBold.woff") format("woff");
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* Poppins-700 - Bold */
+  @font-face {
+    font-style: normal;
+    font-family: "Poppins";
     font-weight: 700;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff");
+    src: local(""), url("/assets/fonts/Poppins-Bold.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Poppins-Bold.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
-  /* roboto-900 - latin */
+  /* Poppins-900 - Extra Bold */
   @font-face {
     font-style: normal;
-    font-family: "Roboto";
+    font-family: "Poppins";
     font-weight: 900;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff");
+    src: local(""), url("/assets/fonts/Poppins-black.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/Poppins-black.woff") format("woff");
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 }
@@ -923,7 +932,8 @@
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
     text-align: center;
     margin: 0;
     color: #fff;

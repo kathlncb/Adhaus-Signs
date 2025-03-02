@@ -60,6 +60,7 @@
     max-width: 51.8125rem;
     /* 16px - 24px */
     margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+    margin: clamp(1rem, 5vw, 2rem) auto clamp(1rem, 4vw, 1.5rem);
     color: #fff;
     position: relative;
   }
@@ -92,8 +93,9 @@
     font-size: 1rem;
     line-height: 3.5rem;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
     margin: auto;
+    font-family: "Poppins", sans-serif;
     color: #fff;
     padding: 0 1.5rem;
     background-color: var(--primary);
