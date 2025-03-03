@@ -87,4 +87,43 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
         }
 
     new GalleryFilter()
-                                
+ 
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to get the value of a URL parameter
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+    
+        // Get filter value from the URL
+        const filterParam = getQueryParam("filter");
+    
+        if (filterParam) {
+            console.log("Filter found in URL:", filterParam);
+            filterGallery(filterParam); // Apply the filter
+        }
+    
+        // Function to apply filtering
+        function filterGallery(filter) {
+            const allImages = document.querySelectorAll(".cs-gallery");
+            allImages.forEach(img => {
+                if (filter === "all" || img.dataset.category === filter) {
+                    img.classList.remove("cs-hidden"); // Show matching images
+                } else {
+                    img.classList.add("cs-hidden"); // Hide others
+                }
+            });
+    
+            // Highlight the correct button
+            const allButtons = document.querySelectorAll(".cs-button");
+            allButtons.forEach(button => {
+                if (button.dataset.filter === filter) {
+                    button.classList.add("cs-active");
+                } else {
+                    button.classList.remove("cs-active");
+                }
+            });
+        }
+    });
+    
+    
